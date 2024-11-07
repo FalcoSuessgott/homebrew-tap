@@ -5,12 +5,12 @@
 class Vkv < Formula
   desc "vkv"
   homepage "https://falcosuessgott.github.io/vkv/"
-  version "0.8.3"
+  version "0.8.4"
 
   on_macos do
     on_intel do
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.3/vkv_Darwin_x86_64.tar.gz"
-      sha256 "a25e979dac5bff3f2a055b22dbe762e9d564ed17b19bed79ee32df62e8096acd"
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.4/vkv_Darwin_x86_64.tar.gz"
+      sha256 "e860d3d1241a449128865f43237d0a00ce4e017ce5bb4fabfab45b4ae8096377"
 
       def install
         bin.install "vkv"
@@ -23,8 +23,8 @@ class Vkv < Formula
       end
     end
     on_arm do
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.3/vkv_Darwin_arm64.tar.gz"
-      sha256 "e89e2b7d34eb0f5c301fcb223e9ef515e416069c69a63ed861772dd2830201de"
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.4/vkv_Darwin_arm64.tar.gz"
+      sha256 "c613d0adaf0480c754460b868a7556330665961f5c3165721eb610e563fd3924"
 
       def install
         bin.install "vkv"
@@ -41,8 +41,8 @@ class Vkv < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.3/vkv_Linux_x86_64.tar.gz"
-        sha256 "187f5bc86dda036ef3b2ee6749f0bb8e942601f588ac4657ae9b4ccc45c7844b"
+        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.4/vkv_Linux_x86_64.tar.gz"
+        sha256 "3228e0ff9bffb536066c0e64b0d04644749605133f7d0b6fa14d2b2526d12150"
 
         def install
           bin.install "vkv"
@@ -57,8 +57,8 @@ class Vkv < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.3/vkv_Linux_arm64.tar.gz"
-        sha256 "bad1fba020fb4f5dd17a576f0a8a4bfd2423fdf17868d575e363af04dc924dc5"
+        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.4/vkv_Linux_arm64.tar.gz"
+        sha256 "2b15f383ae6d6b012f4b6af51e97c7bb36c6674ca8a53dcf0a611ff0ac4c122c"
 
         def install
           bin.install "vkv"
