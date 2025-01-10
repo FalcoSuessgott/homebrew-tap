@@ -5,20 +5,20 @@
 class Mdtmpl < Formula
   desc "mdtpl"
   homepage "https://github.com/FalcoSuessgott/mdtmpl"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.1/mdtmpl_Darwin_x86_64.tar.gz"
-      sha256 "ffe6f72a09b686260be2d0acd2fe3572fb4611eab0dc5e31a7b7e0dfc2fe830b"
+      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.2/mdtmpl_Darwin_x86_64.tar.gz"
+      sha256 "9d72cb103f9efa494858f5cd60519a9df774adfcd9d5fe4a43dcf4060a940347"
 
       def install
         bin.install "mdtmpl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.1/mdtmpl_Darwin_arm64.tar.gz"
-      sha256 "613408e26a6063e54cb0027ab2a34cc94495b6402525dfac64bcddcd66299e4b"
+      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.2/mdtmpl_Darwin_arm64.tar.gz"
+      sha256 "30f46fcd3db87e62518c1f9a3adf5034ecfe9e1c68aa235d8b6e9666cd5bdf9e"
 
       def install
         bin.install "mdtmpl"
@@ -29,8 +29,8 @@ class Mdtmpl < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.1/mdtmpl_Linux_x86_64.tar.gz"
-        sha256 "7da09d39b460f908d15e8953bdc7acb82d513bf1ad26e4656ab0db451a0ed6d9"
+        url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.2/mdtmpl_Linux_x86_64.tar.gz"
+        sha256 "dbec64da22b8006a0875e5455b8d1b6c89d5f106d3b61905c00d0b5aa47a0aef"
 
         def install
           bin.install "mdtmpl"
@@ -39,8 +39,8 @@ class Mdtmpl < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.1/mdtmpl_Linux_arm64.tar.gz"
-        sha256 "9d1eb637988914149de18b6e58c637a1faea1955bcc14f1856216e17f13a68f9"
+        url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.2/mdtmpl_Linux_arm64.tar.gz"
+        sha256 "694bc502f17db78d727c5de24ff2d1e45c31bfddb4ac276dc00215b61fd43d9d"
 
         def install
           bin.install "mdtmpl"
