@@ -5,12 +5,12 @@
 class Vkv < Formula
   desc "vkv"
   homepage "https://falcosuessgott.github.io/vkv/"
-  version "0.8.4"
+  version "0.8.5"
 
   on_macos do
-    on_intel do
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.4/vkv_Darwin_x86_64.tar.gz"
-      sha256 "e860d3d1241a449128865f43237d0a00ce4e017ce5bb4fabfab45b4ae8096377"
+    if Hardware::CPU.intel?
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.5/vkv_Darwin_x86_64.tar.gz"
+      sha256 "f7045a9ad2e0eb555be9fc3583cfac747cdda5f61e5fef7659a770cebb9d1611"
 
       def install
         bin.install "vkv"
@@ -22,9 +22,9 @@ class Vkv < Formula
         (fish_completion/"vkv.fish").write fish_output
       end
     end
-    on_arm do
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.4/vkv_Darwin_arm64.tar.gz"
-      sha256 "c613d0adaf0480c754460b868a7556330665961f5c3165721eb610e563fd3924"
+    if Hardware::CPU.arm?
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.5/vkv_Darwin_arm64.tar.gz"
+      sha256 "b4184b41c7982dcee87c1516ab318d0d5b509da9a998d1684c2fc860a559e1f6"
 
       def install
         bin.install "vkv"
@@ -39,10 +39,10 @@ class Vkv < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.4/vkv_Linux_x86_64.tar.gz"
-        sha256 "3228e0ff9bffb536066c0e64b0d04644749605133f7d0b6fa14d2b2526d12150"
+        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.5/vkv_Linux_x86_64.tar.gz"
+        sha256 "d69cce710afe0b859c7aefdafa9c46370f064b42f8023927e2765e7e3b1e4d93"
 
         def install
           bin.install "vkv"
@@ -55,10 +55,10 @@ class Vkv < Formula
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.4/vkv_Linux_arm64.tar.gz"
-        sha256 "2b15f383ae6d6b012f4b6af51e97c7bb36c6674ca8a53dcf0a611ff0ac4c122c"
+        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.5/vkv_Linux_arm64.tar.gz"
+        sha256 "d5786bb8976c0ddc12e97c2654adfcfd9552fedb37b99647a6619c7d0ee31eff"
 
         def install
           bin.install "vkv"
