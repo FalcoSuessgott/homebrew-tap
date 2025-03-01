@@ -5,20 +5,20 @@
 class KubectlVaultLogin < Formula
   desc "kubectl-vault-login"
   homepage "https://github.com/FalcoSuessgott/kubectl-vault-login"
-  version "0.0.3"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/FalcoSuessgott/kubectl-vault-login/releases/download/v0.0.3/kubectl-vault-login_Darwin_x86_64.tar.gz"
-      sha256 "96e7839aa56b2d943e10e7c202fb0667fbead8f75d8e47c7e8d2d24620ca022b"
+      url "https://github.com/FalcoSuessgott/kubectl-vault-login/releases/download/v0.1.0/kubectl-vault-login_Darwin_x86_64.tar.gz"
+      sha256 "089df992a4d455933e61a5792a6f4f938d4a301df8dd0c93742e8df3db65b9b5"
 
       def install
         bin.install "kubectl-vault-login"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/FalcoSuessgott/kubectl-vault-login/releases/download/v0.0.3/kubectl-vault-login_Darwin_arm64.tar.gz"
-      sha256 "92724a95b8e8dc34f11358b3fc2e6dfe9b522a006ef35026496752a81866a6a7"
+      url "https://github.com/FalcoSuessgott/kubectl-vault-login/releases/download/v0.1.0/kubectl-vault-login_Darwin_arm64.tar.gz"
+      sha256 "58542336c949123a3ab898cf2c65d16e89e8360333f078f2b138259f8ed7f76f"
 
       def install
         bin.install "kubectl-vault-login"
@@ -29,8 +29,8 @@ class KubectlVaultLogin < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/kubectl-vault-login/releases/download/v0.0.3/kubectl-vault-login_Linux_x86_64.tar.gz"
-        sha256 "00e26621056a41b1f5cae3a7c9590407730e7d6b5937437445305b6612e58f14"
+        url "https://github.com/FalcoSuessgott/kubectl-vault-login/releases/download/v0.1.0/kubectl-vault-login_Linux_x86_64.tar.gz"
+        sha256 "f37cd468e44970ad6821d1b5b7b24aab3fb3ecbbde5b7a92d6a45122333ce9d8"
 
         def install
           bin.install "kubectl-vault-login"
@@ -39,8 +39,8 @@ class KubectlVaultLogin < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/kubectl-vault-login/releases/download/v0.0.3/kubectl-vault-login_Linux_arm64.tar.gz"
-        sha256 "bf19be65ce98a3730703b188dc0c0e3fac14f589f41a323e241d646c3315bb08"
+        url "https://github.com/FalcoSuessgott/kubectl-vault-login/releases/download/v0.1.0/kubectl-vault-login_Linux_arm64.tar.gz"
+        sha256 "f0b2a14ee7bbcf3b2a870e36c3fd5e2241e9d2a3e73cbb1305b16a8aaffda1ef"
 
         def install
           bin.install "kubectl-vault-login"
