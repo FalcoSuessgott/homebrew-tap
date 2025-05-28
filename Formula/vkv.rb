@@ -5,12 +5,12 @@
 class Vkv < Formula
   desc "vkv"
   homepage "https://falcosuessgott.github.io/vkv/"
-  version "0.8.6"
+  version "0.9.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.6/vkv_Darwin_x86_64.tar.gz"
-      sha256 "300ca58071aea21c38b971bab5729accc86217053a4642c90b8d27a0c3dccef7"
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.0/vkv_Darwin_x86_64.tar.gz"
+      sha256 "fa7a204c13e75ee0a26c0c1218bd79ff22e48045f060b61adf265497a7dd670c"
 
       def install
         bin.install "vkv"
@@ -23,8 +23,8 @@ class Vkv < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.6/vkv_Darwin_arm64.tar.gz"
-      sha256 "c83de6c5eb77b4acaa218c6f383932a136b904685721d3ec0f2f17383ee6475b"
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.0/vkv_Darwin_arm64.tar.gz"
+      sha256 "3a2e2f9f81b843be609b84fa492cf60fa050535ee050245435f13adaf5877c87"
 
       def install
         bin.install "vkv"
@@ -39,36 +39,30 @@ class Vkv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.6/vkv_Linux_x86_64.tar.gz"
-        sha256 "0c4b448288d954c9d6e1d681b3367c3baea026d0467a026bcda4c7f753d7d590"
-
-        def install
-          bin.install "vkv"
-          bash_output = Utils.safe_popen_read(bin/"vkv", "completion", "bash")
-          (bash_completion/"vkv").write bash_output
-          zsh_output = Utils.safe_popen_read(bin/"vkv", "completion", "zsh")
-          (zsh_completion/"vkv").write zsh_output
-          fish_output = Utils.safe_popen_read(bin/"vkv", "completion", "fish")
-          (fish_completion/"vkv.fish").write fish_output
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.0/vkv_Linux_x86_64.tar.gz"
+      sha256 "c8194cb8c9feb8f2efe801a65d0ceedec9b84629675627256fca52335850fdee"
+      def install
+        bin.install "vkv"
+        bash_output = Utils.safe_popen_read(bin/"vkv", "completion", "bash")
+        (bash_completion/"vkv").write bash_output
+        zsh_output = Utils.safe_popen_read(bin/"vkv", "completion", "zsh")
+        (zsh_completion/"vkv").write zsh_output
+        fish_output = Utils.safe_popen_read(bin/"vkv", "completion", "fish")
+        (fish_completion/"vkv.fish").write fish_output
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.8.6/vkv_Linux_arm64.tar.gz"
-        sha256 "0decdb5631b6996f0cc2a23cffc510b4f59923d82fdadaf1d02f555ba0e931c4"
-
-        def install
-          bin.install "vkv"
-          bash_output = Utils.safe_popen_read(bin/"vkv", "completion", "bash")
-          (bash_completion/"vkv").write bash_output
-          zsh_output = Utils.safe_popen_read(bin/"vkv", "completion", "zsh")
-          (zsh_completion/"vkv").write zsh_output
-          fish_output = Utils.safe_popen_read(bin/"vkv", "completion", "fish")
-          (fish_completion/"vkv.fish").write fish_output
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.0/vkv_Linux_arm64.tar.gz"
+      sha256 "7c85da12b213d2af85d735cb81e6bd3d182e1bc88501478ed4374f59b75818be"
+      def install
+        bin.install "vkv"
+        bash_output = Utils.safe_popen_read(bin/"vkv", "completion", "bash")
+        (bash_completion/"vkv").write bash_output
+        zsh_output = Utils.safe_popen_read(bin/"vkv", "completion", "zsh")
+        (zsh_completion/"vkv").write zsh_output
+        fish_output = Utils.safe_popen_read(bin/"vkv", "completion", "fish")
+        (fish_completion/"vkv.fish").write fish_output
       end
     end
   end
