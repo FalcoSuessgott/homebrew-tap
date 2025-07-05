@@ -5,12 +5,12 @@
 class Vkv < Formula
   desc "vkv"
   homepage "https://falcosuessgott.github.io/vkv/"
-  version "0.9.2"
+  version "0.9.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.2/vkv_Darwin_x86_64.tar.gz"
-      sha256 "89f6ea0a7f56549ab23608b00fd2d17e3498d06e19efccfa99368235005a8e53"
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.3/vkv_Darwin_x86_64.tar.gz"
+      sha256 "d2fa7f8e6d40f97451ec0f6e47cb6631101c39e6adba4f301c722e482dd7142d"
 
       def install
         bin.install "vkv"
@@ -23,8 +23,8 @@ class Vkv < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.2/vkv_Darwin_arm64.tar.gz"
-      sha256 "bf49cbf9884ff98f86f928ccc978858f8dc0a4d21885dca8c6db9fe1d2e1fba7"
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.3/vkv_Darwin_arm64.tar.gz"
+      sha256 "ddd625f6e2f751fbe3b55325eff4a52077a10136626021ceffdaa8889e521456"
 
       def install
         bin.install "vkv"
@@ -40,8 +40,8 @@ class Vkv < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.2/vkv_Linux_x86_64.tar.gz"
-      sha256 "3b57cf97d93f97da5a6bbd4f46b9fb55428b4d010944c75d8e82956af07b08d9"
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.3/vkv_Linux_x86_64.tar.gz"
+      sha256 "646ca9390f96210a065b33bfed62215c8a6567d41452e68898cb83dca9757682"
       def install
         bin.install "vkv"
         bash_output = Utils.safe_popen_read(bin/"vkv", "completion", "bash")
@@ -53,8 +53,8 @@ class Vkv < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.2/vkv_Linux_arm64.tar.gz"
-      sha256 "b2d69a23ad3502a379569f633f7620c92850ea4245ece82aa574a1d82147a3e0"
+      url "https://github.com/FalcoSuessgott/vkv/releases/download/v0.9.3/vkv_Linux_arm64.tar.gz"
+      sha256 "a5d80ce35eb96408d67be22ea6ec8293cfd52219ee1771ffa049fbf9d980c27d"
       def install
         bin.install "vkv"
         bash_output = Utils.safe_popen_read(bin/"vkv", "completion", "bash")
