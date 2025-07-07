@@ -5,20 +5,20 @@
 class Mdtmpl < Formula
   desc "mdtpl"
   homepage "https://github.com/FalcoSuessgott/mdtmpl"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.2/mdtmpl_Darwin_x86_64.tar.gz"
-      sha256 "9d72cb103f9efa494858f5cd60519a9df774adfcd9d5fe4a43dcf4060a940347"
+      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.3/mdtmpl_Darwin_x86_64.tar.gz"
+      sha256 "33e3ed17a9730fa2af1ebf6e68c870d96a0d2d07b7a6396bf1fca0c9b7c9ff63"
 
       def install
         bin.install "mdtmpl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.2/mdtmpl_Darwin_arm64.tar.gz"
-      sha256 "30f46fcd3db87e62518c1f9a3adf5034ecfe9e1c68aa235d8b6e9666cd5bdf9e"
+      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.3/mdtmpl_Darwin_arm64.tar.gz"
+      sha256 "d3e0ec586edaf265abc4b9c38d2e36ff5eded72b3769e770c1f8ec31c311bb72"
 
       def install
         bin.install "mdtmpl"
@@ -27,24 +27,18 @@ class Mdtmpl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.2/mdtmpl_Linux_x86_64.tar.gz"
-        sha256 "dbec64da22b8006a0875e5455b8d1b6c89d5f106d3b61905c00d0b5aa47a0aef"
-
-        def install
-          bin.install "mdtmpl"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.3/mdtmpl_Linux_x86_64.tar.gz"
+      sha256 "f07dbb48ca982b66668e017743327a785d963c6a7a3b11a697ce74c28c32f179"
+      def install
+        bin.install "mdtmpl"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.2/mdtmpl_Linux_arm64.tar.gz"
-        sha256 "694bc502f17db78d727c5de24ff2d1e45c31bfddb4ac276dc00215b61fd43d9d"
-
-        def install
-          bin.install "mdtmpl"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/FalcoSuessgott/mdtmpl/releases/download/v0.2.3/mdtmpl_Linux_arm64.tar.gz"
+      sha256 "a3f5d59ef7b2a7f6c2c665d732d8cdc2ea6c165916ddf6da81965124ac8f3ebc"
+      def install
+        bin.install "mdtmpl"
       end
     end
   end
